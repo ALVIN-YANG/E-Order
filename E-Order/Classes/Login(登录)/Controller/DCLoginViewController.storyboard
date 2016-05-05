@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qhm-Zb-Py8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="WKq-3W-U5c">
+            <objects>
+                <viewController id="qhm-Zb-Py8" customClass="DCLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zrd-8u-Uaz"/>
+                        <viewControllerLayoutGuide type="bottom" id="TIK-jO-BxW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gJN-Wp-pQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-3" translatesAutoresizingMaskIntoConstraints="NO" id="VMG-SR-jAD">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-J9-9mw">
+                                <rect key="frame" x="407" y="384" width="210" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="T8G-MJ-0je"/>
+                                    <constraint firstAttribute="width" constant="210" id="UCj-gz-QCb"/>
+                                    <constraint firstAttribute="height" constant="210" id="l0B-ye-oQD"/>
+                                    <constraint firstAttribute="height" constant="210" id="wol-D5-PQN"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="start_normal"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UCj-gz-QCb"/>
+                                        <exclude reference="l0B-ye-oQD"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loginButtonClick:" destination="qhm-Zb-Py8" eventType="touchUpInside" id="ElS-ee-RYe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1R-ux-e7y">
+                                <rect key="frame" x="517" y="634" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.54117647059999996" blue="0.34901960780000002" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7EQ-aJ-90p"/>
+                                    <constraint firstAttribute="height" constant="30" id="LMQ-Ra-tBL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="14"/>
+                                <state key="normal" title="厨房登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="kittenButtonClick:" destination="qhm-Zb-Py8" eventType="touchUpInside" id="mq7-IN-3tt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 北京纽巴奥网络科技. 敬请登录 www.emenu.cc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daI-H9-hCN">
+                                <rect key="frame" x="375.5" y="726" width="273.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loO-2b-PJB">
+                                <rect key="frame" x="407" y="634" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.54117647058823526" blue="0.34901960784313724" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="5UY-he-1it"/>
+                                    <constraint firstAttribute="height" constant="30" id="EgA-IQ-Cm9"/>
+                                    <constraint firstAttribute="width" constant="100" id="GTd-0G-qbt"/>
+                                    <constraint firstAttribute="height" constant="30" id="TSj-fH-jod"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="14"/>
+                                <state key="normal" title="前台登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5UY-he-1it"/>
+                                        <exclude reference="EgA-IQ-Cm9"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="employeeButtonClick:" destination="qhm-Zb-Py8" eventType="touchUpInside" id="FrS-hh-TD8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C1R-ux-e7y" firstAttribute="centerX" secondItem="gJN-Wp-pQ9" secondAttribute="centerX" constant="55" id="0s2-g9-8sZ"/>
+                            <constraint firstItem="loO-2b-PJB" firstAttribute="top" secondItem="aYz-J9-9mw" secondAttribute="bottom" constant="40" id="6Cw-wh-04J"/>
+                            <constraint firstItem="VMG-SR-jAD" firstAttribute="leading" secondItem="gJN-Wp-pQ9" secondAttribute="leading" id="6V9-Ha-JqY"/>
+                            <constraint firstItem="VMG-SR-jAD" firstAttribute="top" secondItem="zrd-8u-Uaz" secondAttribute="bottom" id="LG9-qq-fyG"/>
+                            <constraint firstItem="C1R-ux-e7y" firstAttribute="top" secondItem="aYz-J9-9mw" secondAttribute="bottom" constant="40" id="MfG-we-fVk"/>
+                            <constraint firstItem="TIK-jO-BxW" firstAttribute="top" secondItem="loO-2b-PJB" secondAttribute="bottom" constant="60" id="QXY-EZ-jam"/>
+                            <constraint firstItem="daI-H9-hCN" firstAttribute="centerX" secondItem="gJN-Wp-pQ9" secondAttribute="centerX" id="X50-6E-Oa3"/>
+                            <constraint firstItem="TIK-jO-BxW" firstAttribute="top" secondItem="daI-H9-hCN" secondAttribute="bottom" constant="30" id="bfX-pu-BbR"/>
+                            <constraint firstItem="loO-2b-PJB" firstAttribute="centerX" secondItem="gJN-Wp-pQ9" secondAttribute="centerX" constant="-55" id="cvt-It-4lt"/>
+                            <constraint firstItem="loO-2b-PJB" firstAttribute="centerX" secondItem="gJN-Wp-pQ9" secondAttribute="centerX" constant="-65" id="kQC-rP-SeJ"/>
+                            <constraint firstAttribute="trailing" secondItem="VMG-SR-jAD" secondAttribute="trailing" id="kbA-xq-otL"/>
+                            <constraint firstItem="aYz-J9-9mw" firstAttribute="centerX" secondItem="gJN-Wp-pQ9" secondAttribute="centerX" id="ovm-6G-lPO"/>
+                            <constraint firstItem="VMG-SR-jAD" firstAttribute="top" secondItem="gJN-Wp-pQ9" secondAttribute="top" id="uWt-MI-YKb"/>
+                            <constraint firstItem="aYz-J9-9mw" firstAttribute="centerY" secondItem="gJN-Wp-pQ9" secondAttribute="centerY" constant="105" id="wZG-QF-rdx"/>
+                            <constraint firstItem="TIK-jO-BxW" firstAttribute="top" secondItem="VMG-SR-jAD" secondAttribute="bottom" id="y0I-Ab-nDc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LG9-qq-fyG"/>
+                                <exclude reference="kQC-rP-SeJ"/>
+                                <exclude reference="QXY-EZ-jam"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="employeeButton" destination="loO-2b-PJB" id="yr2-wB-fwN"/>
+                        <outlet property="kitchenButton" destination="C1R-ux-e7y" id="SGL-rI-yA1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLv-BD-xne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background-3" width="1024" height="768"/>
+        <image name="start_normal" width="363" height="363"/>
+    </resources>
+</document>
