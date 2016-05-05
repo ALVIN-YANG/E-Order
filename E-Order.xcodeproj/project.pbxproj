@@ -17,6 +17,20 @@
 		391928E51CDA08EE0043E83A /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 391928E41CDA08EE0043E83A /* UIImage+Circle.m */; };
 		391928E81CDA0A140043E83A /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 391928E71CDA0A140043E83A /* DCLoginViewController.m */; };
 		391928EA1CDA0E310043E83A /* DCLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391928E91CDA0E310043E83A /* DCLoginViewController.storyboard */; };
+		39BDDE9A1CDAF34700CB1F89 /* LoginViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDE991CDAF34700CB1F89 /* LoginViewItem.m */; };
+		39BDDEA71CDAF98200CB1F89 /* SelectTabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEA61CDAF98200CB1F89 /* SelectTabelController.m */; };
+		39BDDEAA1CDB005600CB1F89 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEA91CDB005600CB1F89 /* CustomNavigationController.m */; };
+		39BDDEAF1CDB132800CB1F89 /* DCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEAE1CDB132800CB1F89 /* DCMainViewController.m */; };
+		39BDDEB11CDB134500CB1F89 /* DCMainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BDDEB01CDB134500CB1F89 /* DCMainViewController.storyboard */; };
+		39BDDEB31CDB1A9F00CB1F89 /* SelectTabelController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BDDEB21CDB1A9F00CB1F89 /* SelectTabelController.storyboard */; };
+		39BDDEE81CDB402C00CB1F89 /* SelectTebleCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEE61CDB402C00CB1F89 /* SelectTebleCellTableViewCell.m */; };
+		39BDDEE91CDB402C00CB1F89 /* SelectTebleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39BDDEE71CDB402C00CB1F89 /* SelectTebleCell.xib */; };
+		39BDDEED1CDB5DC000CB1F89 /* SelectCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEEB1CDB5DC000CB1F89 /* SelectCollectionCell.m */; };
+		39BDDEEE1CDB5DC000CB1F89 /* SelectCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39BDDEEC1CDB5DC000CB1F89 /* SelectCollectionCell.xib */; };
+		39BDDEF11CDB76B700CB1F89 /* TableCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEF01CDB76B700CB1F89 /* TableCategoryItem.m */; };
+		39BDDEF41CDB837500CB1F89 /* TableStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEF31CDB837500CB1F89 /* TableStatusItem.m */; };
+		39BDDEFC1CDB96D100CB1F89 /* ConfirmAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BDDEFB1CDB96D100CB1F89 /* ConfirmAlertController.m */; };
+		39BDDEFE1CDB96E100CB1F89 /* ConfirmAlertController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BDDEFD1CDB96E100CB1F89 /* ConfirmAlertController.storyboard */; };
 		741E8F4EC4CB225E445478E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 248616290AC986259E2BDCBE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +66,29 @@
 		391928E61CDA0A140043E83A /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLoginViewController.h; sourceTree = "<group>"; };
 		391928E71CDA0A140043E83A /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLoginViewController.m; sourceTree = "<group>"; };
 		391928E91CDA0E310043E83A /* DCLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DCLoginViewController.storyboard; sourceTree = "<group>"; };
+		39BDDE981CDAF34700CB1F89 /* LoginViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewItem.h; sourceTree = "<group>"; };
+		39BDDE991CDAF34700CB1F89 /* LoginViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewItem.m; sourceTree = "<group>"; };
+		39BDDEA51CDAF98200CB1F89 /* SelectTabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTabelController.h; sourceTree = "<group>"; };
+		39BDDEA61CDAF98200CB1F89 /* SelectTabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTabelController.m; sourceTree = "<group>"; };
+		39BDDEA81CDB005600CB1F89 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationController.h; path = "../../Home(主页面)/Controller/CustomNavigationController.h"; sourceTree = "<group>"; };
+		39BDDEA91CDB005600CB1F89 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationController.m; path = "../../Home(主页面)/Controller/CustomNavigationController.m"; sourceTree = "<group>"; };
+		39BDDEAD1CDB132800CB1F89 /* DCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMainViewController.h; sourceTree = "<group>"; };
+		39BDDEAE1CDB132800CB1F89 /* DCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMainViewController.m; sourceTree = "<group>"; };
+		39BDDEB01CDB134500CB1F89 /* DCMainViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DCMainViewController.storyboard; sourceTree = "<group>"; };
+		39BDDEB21CDB1A9F00CB1F89 /* SelectTabelController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectTabelController.storyboard; sourceTree = "<group>"; };
+		39BDDEE51CDB402C00CB1F89 /* SelectTebleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectTebleCell.h; path = ../Controller/SelectTebleCell.h; sourceTree = "<group>"; };
+		39BDDEE61CDB402C00CB1F89 /* SelectTebleCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectTebleCellTableViewCell.m; path = ../Controller/SelectTebleCellTableViewCell.m; sourceTree = "<group>"; };
+		39BDDEE71CDB402C00CB1F89 /* SelectTebleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectTebleCell.xib; path = ../Controller/SelectTebleCell.xib; sourceTree = "<group>"; };
+		39BDDEEA1CDB5DC000CB1F89 /* SelectCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCollectionCell.h; sourceTree = "<group>"; };
+		39BDDEEB1CDB5DC000CB1F89 /* SelectCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCollectionCell.m; sourceTree = "<group>"; };
+		39BDDEEC1CDB5DC000CB1F89 /* SelectCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCollectionCell.xib; sourceTree = "<group>"; };
+		39BDDEEF1CDB76B700CB1F89 /* TableCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCategoryItem.h; sourceTree = "<group>"; };
+		39BDDEF01CDB76B700CB1F89 /* TableCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCategoryItem.m; sourceTree = "<group>"; };
+		39BDDEF21CDB837500CB1F89 /* TableStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableStatusItem.h; sourceTree = "<group>"; };
+		39BDDEF31CDB837500CB1F89 /* TableStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableStatusItem.m; sourceTree = "<group>"; };
+		39BDDEFA1CDB96D100CB1F89 /* ConfirmAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmAlertController.h; sourceTree = "<group>"; };
+		39BDDEFB1CDB96D100CB1F89 /* ConfirmAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmAlertController.m; sourceTree = "<group>"; };
+		39BDDEFD1CDB96E100CB1F89 /* ConfirmAlertController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfirmAlertController.storyboard; sourceTree = "<group>"; };
 		A2D0064B670A02FB3B72F2B2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C0D241995042D1864D62F6C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +164,8 @@
 		391928D11CDA00100043E83A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				39BDDEAB1CDB12E400CB1F89 /* Custom(自定义) */,
+				39BDDE9B1CDAF57700CB1F89 /* SelectTable(选桌) */,
 				391928D21CDA00100043E83A /* Home(主页面) */,
 				391928D31CDA00100043E83A /* Login(登录) */,
 				391928D71CDA00100043E83A /* Other */,
@@ -137,6 +176,9 @@
 		391928D21CDA00100043E83A /* Home(主页面) */ = {
 			isa = PBXGroup;
 			children = (
+				39BDDE9F1CDAF8BD00CB1F89 /* Controller */,
+				39BDDEA01CDAF8BD00CB1F89 /* Model */,
+				39BDDEA11CDAF8BD00CB1F89 /* View */,
 			);
 			path = "Home(主页面)";
 			sourceTree = "<group>";
@@ -164,6 +206,8 @@
 		391928D51CDA00100043E83A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39BDDE981CDAF34700CB1F89 /* LoginViewItem.h */,
+				39BDDE991CDAF34700CB1F89 /* LoginViewItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +241,94 @@
 				391928E11CDA070D0043E83A /* UIView+Frame.m */,
 			);
 			path = Catagory;
+			sourceTree = "<group>";
+		};
+		39BDDE9B1CDAF57700CB1F89 /* SelectTable(选桌) */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDE9C1CDAF57700CB1F89 /* Controller */,
+				39BDDE9D1CDAF57700CB1F89 /* Model */,
+				39BDDE9E1CDAF57700CB1F89 /* View */,
+			);
+			path = "SelectTable(选桌)";
+			sourceTree = "<group>";
+		};
+		39BDDE9C1CDAF57700CB1F89 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDEA51CDAF98200CB1F89 /* SelectTabelController.h */,
+				39BDDEA61CDAF98200CB1F89 /* SelectTabelController.m */,
+				39BDDEB21CDB1A9F00CB1F89 /* SelectTabelController.storyboard */,
+				39BDDEFA1CDB96D100CB1F89 /* ConfirmAlertController.h */,
+				39BDDEFB1CDB96D100CB1F89 /* ConfirmAlertController.m */,
+				39BDDEFD1CDB96E100CB1F89 /* ConfirmAlertController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39BDDE9D1CDAF57700CB1F89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDEEF1CDB76B700CB1F89 /* TableCategoryItem.h */,
+				39BDDEF01CDB76B700CB1F89 /* TableCategoryItem.m */,
+				39BDDEF21CDB837500CB1F89 /* TableStatusItem.h */,
+				39BDDEF31CDB837500CB1F89 /* TableStatusItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39BDDE9E1CDAF57700CB1F89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDEE51CDB402C00CB1F89 /* SelectTebleCell.h */,
+				39BDDEE61CDB402C00CB1F89 /* SelectTebleCellTableViewCell.m */,
+				39BDDEE71CDB402C00CB1F89 /* SelectTebleCell.xib */,
+				39BDDEEA1CDB5DC000CB1F89 /* SelectCollectionCell.h */,
+				39BDDEEB1CDB5DC000CB1F89 /* SelectCollectionCell.m */,
+				39BDDEEC1CDB5DC000CB1F89 /* SelectCollectionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39BDDE9F1CDAF8BD00CB1F89 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDEAD1CDB132800CB1F89 /* DCMainViewController.h */,
+				39BDDEAE1CDB132800CB1F89 /* DCMainViewController.m */,
+				39BDDEB01CDB134500CB1F89 /* DCMainViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39BDDEA01CDAF8BD00CB1F89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39BDDEA11CDAF8BD00CB1F89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39BDDEAB1CDB12E400CB1F89 /* Custom(自定义) */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDEAC1CDB12E400CB1F89 /* Controller */,
+			);
+			path = "Custom(自定义)";
+			sourceTree = "<group>";
+		};
+		39BDDEAC1CDB12E400CB1F89 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39BDDEA81CDB005600CB1F89 /* CustomNavigationController.h */,
+				39BDDEA91CDB005600CB1F89 /* CustomNavigationController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E637F6A4F89B1A1A16D78848 /* Frameworks */ = {
@@ -301,8 +433,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BDDEB31CDB1A9F00CB1F89 /* SelectTabelController.storyboard in Resources */,
 				391928EA1CDA0E310043E83A /* DCLoginViewController.storyboard in Resources */,
+				39BDDEB11CDB134500CB1F89 /* DCMainViewController.storyboard in Resources */,
+				39BDDEEE1CDB5DC000CB1F89 /* SelectCollectionCell.xib in Resources */,
 				391928BC1CD9EC4E0043E83A /* LaunchScreen.storyboard in Resources */,
+				39BDDEE91CDB402C00CB1F89 /* SelectTebleCell.xib in Resources */,
+				39BDDEFE1CDB96E100CB1F89 /* ConfirmAlertController.storyboard in Resources */,
 				391928B91CD9EC4E0043E83A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,11 +506,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BDDEAF1CDB132800CB1F89 /* DCMainViewController.m in Sources */,
+				39BDDEFC1CDB96D100CB1F89 /* ConfirmAlertController.m in Sources */,
+				39BDDEED1CDB5DC000CB1F89 /* SelectCollectionCell.m in Sources */,
+				39BDDEF11CDB76B700CB1F89 /* TableCategoryItem.m in Sources */,
 				391928DF1CDA042A0043E83A /* Global.m in Sources */,
+				39BDDEAA1CDB005600CB1F89 /* CustomNavigationController.m in Sources */,
 				391928E81CDA0A140043E83A /* DCLoginViewController.m in Sources */,
 				391928E51CDA08EE0043E83A /* UIImage+Circle.m in Sources */,
 				391928DB1CDA00100043E83A /* AppDelegate.m in Sources */,
+				39BDDE9A1CDAF34700CB1F89 /* LoginViewItem.m in Sources */,
+				39BDDEF41CDB837500CB1F89 /* TableStatusItem.m in Sources */,
 				391928E21CDA070D0043E83A /* UIView+Frame.m in Sources */,
+				39BDDEA71CDAF98200CB1F89 /* SelectTabelController.m in Sources */,
+				39BDDEE81CDB402C00CB1F89 /* SelectTebleCellTableViewCell.m in Sources */,
 				391928AE1CD9EC4E0043E83A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

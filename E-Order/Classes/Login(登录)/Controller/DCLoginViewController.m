@@ -10,6 +10,8 @@
 #import <AFNetworking/AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <MJExtension/MJExtension.h>
+#import "LoginViewItem.h"
+#import "DCMainViewController.h"
 
 @interface DCLoginViewController()
 //是否在请求状态
@@ -25,7 +27,8 @@
 
 - (AFHTTPSessionManager *)mgr{
     if (!_mgr) {
-        _mgr = [AFHTTPSessionManager manager];
+        _mgr = [[AFHTTPSessionManager alloc]init];
+        _mgr.requestSerializer = [AFHTTPRequestSerializer serializer];
     }
     return _mgr;
 }
@@ -37,33 +40,40 @@
     [self initUI];
 }
 
-- (void)initUI
+- (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)initUI
+{
+
     self.employeeButton.layer.cornerRadius = 3.0;
     self.kitchenButton.layer.cornerRadius = 3.0;
 }
 
 - (IBAction)loginButtonClick:(id)sender {
+    
     [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
     //拼接parameters
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"username"] = @"newboll";
     parameters[@"password"] = @"newboll1";
+
     NSString *askString = [NSString stringWithFormat:@"%@/Home/user/ajaxlogin", DCBaseUrl];
-    [self.mgr GET:askString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSDictionary * dicc = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSInteger number = [[dicc objectForKey:@"msg"]integerValue];
-        if (1 == number) {
-            
+    [self.mgr POST:askString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        LoginViewItem *dcVC = [LoginViewItem mj_objectWithKeyValues:responseObject];
+        if (1 == dcVC.msg) {
+            //进入主界面
+            DCMainViewController *mainVC = [[UIStoryboard storyboardWithName:NSStringFromClass([DCMainViewController class]) bundle:nil] instantiateInitialViewController];
+            [self.navigationController pushViewController:mainVC animated:YES];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //返回错误代码
+        NSLog(@"%@", error);
         if (error.code == NSURLErrorCancelled) return;
         [SVProgressHUD showErrorWithStatus:@"网络繁忙,稍后尝试"];
     }];
-    
 
 }
 - (IBAction)employeeButtonClick:(id)sender {

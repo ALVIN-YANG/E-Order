@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q5B-gF-vER">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="llw-rh-E3f">
+            <objects>
+                <viewController id="Q5B-gF-vER" customClass="DCMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uYs-fX-gZR"/>
+                        <viewControllerLayoutGuide type="bottom" id="1pn-vd-esx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BOH-2N-NYl">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpJ-5J-LkC">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jby-PI-1nc">
+                                        <rect key="frame" x="216" y="0.0" width="44" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="14" minY="13" maxX="8" maxY="14"/>
+                                        <state key="normal" image="hot_normal"/>
+                                        <state key="selected" image="hot_selected" backgroundImage="bgOrange"/>
+                                        <connections>
+                                            <action selector="secondButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="IKb-Jk-b3s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWL-te-Iot">
+                                        <rect key="frame" x="261" y="0.0" width="44" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="14" minY="13" maxX="8" maxY="14"/>
+                                        <state key="normal" image="price_normal"/>
+                                        <state key="selected" image="price_selected" backgroundImage="bgOrange"/>
+                                        <connections>
+                                            <action selector="thirdButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="5CO-Jx-zf6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G12-Ab-rei">
+                                        <rect key="frame" x="306" y="0.0" width="44" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="12" minY="13" maxX="11" maxY="14"/>
+                                        <state key="normal" image="view_list_normal"/>
+                                        <state key="selected" image="view_list_selected" backgroundImage="bgOrange"/>
+                                        <connections>
+                                            <action selector="fourthButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="RYs-H1-7e5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we9-Me-bxS">
+                                        <rect key="frame" x="171" y="0.0" width="44" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="14" minY="13" maxX="8" maxY="14"/>
+                                        <state key="normal" image="Recommendation_normal"/>
+                                        <state key="selected" image="Recommendation_selected" backgroundImage="bgOrange"/>
+                                        <connections>
+                                            <action selector="firstButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="21o-wF-JCj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGk-Q3-suV">
+                                        <rect key="frame" x="593" y="0.0" width="85" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="titleEdgeInsets" minX="-16" minY="1" maxX="-2" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="35" maxX="59" maxY="36"/>
+                                        <state key="normal" title="桌位选择" image="table_normal">
+                                            <color key="titleColor" red="0.54901960780000003" green="0.53333333329999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="table_selected" backgroundImage="bgOrange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectTableButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="TV4-mn-3lU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxQ-TX-lpd">
+                                        <rect key="frame" x="679" y="0.0" width="85" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="titleEdgeInsets" minX="-29" minY="0.0" maxX="-2" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="2" minY="10" maxX="52" maxY="9"/>
+                                        <state key="normal" title="点餐流程" image="guide_normal">
+                                            <color key="titleColor" red="0.54901960780000003" green="0.53333333329999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" image="guide_selected"/>
+                                        <state key="highlighted" image="guide_selected" backgroundImage="bgOrange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="flowButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="b6o-Pr-YzG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs1-xM-Lqp">
+                                        <rect key="frame" x="765" y="0.0" width="85" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="titleEdgeInsets" minX="-27" minY="0.0" maxX="-2" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="3" minY="9" maxX="49" maxY="8"/>
+                                        <state key="normal" title="餐厅介绍" image="restaurant_normal">
+                                            <color key="titleColor" red="0.54901960780000003" green="0.53333333329999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" image="restaurant_selected"/>
+                                        <state key="highlighted" image="restaurant_selected" backgroundImage="bgOrange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="introductionButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="OEf-rw-7dA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9O-yU-Ysm">
+                                        <rect key="frame" x="852" y="0.0" width="85" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="titleEdgeInsets" minX="-29" minY="0.0" maxX="-2" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="8" maxX="53" maxY="10"/>
+                                        <state key="normal" title="顾客点评" image="feedback_normal">
+                                            <color key="titleColor" red="0.54901960780000003" green="0.53333333329999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" image="feedback_selected"/>
+                                        <state key="highlighted" image="feedback_selected" backgroundImage="bgOrange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="commentButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="oXT-1v-siB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bp-Py-Wa0">
+                                        <rect key="frame" x="939" y="0.0" width="85" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <inset key="titleEdgeInsets" minX="-24" minY="0.0" maxX="-2" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="13" maxX="57" maxY="15"/>
+                                        <state key="normal" title="呼叫服务" image="service_normal">
+                                            <color key="titleColor" red="0.54901960780000003" green="0.53333333329999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected" image="service_selected"/>
+                                        <state key="highlighted" image="service_selected" backgroundImage="bgOrange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="gm9-7e-bdL"/>
+                                        </connections>
+                                    </button>
+                                    <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="搜索菜品" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-LI-4in">
+                                        <rect key="frame" x="351" y="4" width="159" height="44"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxQ-0B-cRc">
+                                        <rect key="frame" x="10" y="13" width="14" height="24"/>
+                                        <state key="normal" backgroundImage="goback">
+                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonClick:" destination="Q5B-gF-vER" eventType="touchUpInside" id="IX3-D4-tIl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.94901960780000005" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="piR-79-MHo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-wG-M5h">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="718"/>
+                                <color key="backgroundColor" red="0.54685360709999997" green="0.8026152849" blue="0.6367659994" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uUw-wG-M5h" secondAttribute="trailing" id="8wT-3f-u7s"/>
+                            <constraint firstItem="VpJ-5J-LkC" firstAttribute="leading" secondItem="BOH-2N-NYl" secondAttribute="leading" id="HnU-Ca-l7k"/>
+                            <constraint firstItem="uUw-wG-M5h" firstAttribute="leading" secondItem="BOH-2N-NYl" secondAttribute="leading" id="Q0H-89-mbL"/>
+                            <constraint firstItem="VpJ-5J-LkC" firstAttribute="top" secondItem="uYs-fX-gZR" secondAttribute="bottom" id="YSR-da-FKN"/>
+                            <constraint firstAttribute="trailing" secondItem="VpJ-5J-LkC" secondAttribute="trailing" id="oHK-PE-bzu"/>
+                            <constraint firstItem="1pn-vd-esx" firstAttribute="top" secondItem="uUw-wG-M5h" secondAttribute="bottom" id="ojX-HF-cZT"/>
+                            <constraint firstItem="uUw-wG-M5h" firstAttribute="top" secondItem="VpJ-5J-LkC" secondAttribute="bottom" id="zm5-zW-tiK"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="containView" destination="uUw-wG-M5h" id="4Z7-3L-ONe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eY1-wz-kPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Recommendation_normal" width="37" height="37"/>
+        <image name="Recommendation_selected" width="37" height="37"/>
+        <image name="bgOrange" width="154" height="90"/>
+        <image name="feedback_normal" width="50" height="50"/>
+        <image name="feedback_selected" width="50" height="50"/>
+        <image name="goback" width="19" height="33"/>
+        <image name="guide_normal" width="50" height="50"/>
+        <image name="guide_selected" width="50" height="50"/>
+        <image name="hot_normal" width="37" height="37"/>
+        <image name="hot_selected" width="37" height="37"/>
+        <image name="price_normal" width="37" height="37"/>
+        <image name="price_selected" width="37" height="37"/>
+        <image name="restaurant_normal" width="50" height="50"/>
+        <image name="restaurant_selected" width="50" height="50"/>
+        <image name="service_normal" width="37" height="37"/>
+        <image name="service_selected" width="37" height="37"/>
+        <image name="table_normal" width="37" height="37"/>
+        <image name="table_selected" width="37" height="37"/>
+        <image name="view_list_normal" width="37" height="37"/>
+        <image name="view_list_selected" width="37" height="37"/>
+    </resources>
+</document>

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DCLoginViewController.h"
+#import "CustomNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 隐藏状态栏
-    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor orangeColor]];
     self.window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     DCLoginViewController *DCVC = [[UIStoryboard storyboardWithName:NSStringFromClass([DCLoginViewController class]) bundle:nil] instantiateInitialViewController];
-    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:DCVC];
+    CustomNavigationController *nav =[[CustomNavigationController alloc]initWithRootViewController:DCVC];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
