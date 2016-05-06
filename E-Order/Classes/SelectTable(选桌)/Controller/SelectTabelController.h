@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SelectTabelControllerDelegate <NSObject>
+
+- (void)jumpToOrderViewController;
+
+@end
 @interface SelectTabelController : UIViewController
 
+@property (nonatomic, weak)id<SelectTabelControllerDelegate> delegate;
 @end

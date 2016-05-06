@@ -55,13 +55,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.077879749238491058" green="0.82499533891677856" blue="0.54516422748565674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Rq5-KQ-RPE" firstAttribute="top" secondItem="lcS-5L-iMp" secondAttribute="bottom" id="9bD-MB-pO2"/>
+                            <constraint firstItem="Wen-Ia-iiu" firstAttribute="top" secondItem="UUC-xE-BnZ" secondAttribute="bottom" constant="10" id="6PO-DB-JKb"/>
                             <constraint firstItem="lcS-5L-iMp" firstAttribute="leading" secondItem="Wen-Ia-iiu" secondAttribute="trailing" constant="10" id="Hyf-YJ-epT"/>
+                            <constraint firstItem="Rq5-KQ-RPE" firstAttribute="top" secondItem="Wen-Ia-iiu" secondAttribute="bottom" id="Ly8-Kc-g1Z"/>
+                            <constraint firstItem="lcS-5L-iMp" firstAttribute="top" secondItem="UUC-xE-BnZ" secondAttribute="bottom" constant="10" id="TbC-DR-HB0"/>
                             <constraint firstItem="Wen-Ia-iiu" firstAttribute="leading" secondItem="Pwg-BY-eOG" secondAttribute="leading" id="ZFv-a2-PeE"/>
-                            <constraint firstItem="lcS-5L-iMp" firstAttribute="top" secondItem="UUC-xE-BnZ" secondAttribute="bottom" constant="10" id="bVC-R7-bqf"/>
-                            <constraint firstItem="Rq5-KQ-RPE" firstAttribute="top" secondItem="Wen-Ia-iiu" secondAttribute="bottom" id="e9m-CR-myv"/>
                             <constraint firstAttribute="trailing" secondItem="lcS-5L-iMp" secondAttribute="trailing" constant="10" id="rMB-z8-WKM"/>
-                            <constraint firstItem="Wen-Ia-iiu" firstAttribute="top" secondItem="UUC-xE-BnZ" secondAttribute="bottom" constant="10" id="tbt-AA-kdb"/>
+                            <constraint firstItem="Rq5-KQ-RPE" firstAttribute="top" secondItem="lcS-5L-iMp" secondAttribute="bottom" id="ybD-XG-pK4"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

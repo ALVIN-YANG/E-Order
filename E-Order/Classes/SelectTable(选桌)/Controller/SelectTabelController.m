@@ -21,6 +21,9 @@
 
 //提示开桌View
 #import "ConfirmAlertView.h"
+
+//导入选菜界面
+#import "OrderViewController.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <MJExtension.h>
@@ -233,7 +236,7 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     
     //如果桌位已满则点击无效
     if (1 == item.status.integerValue) {
-        return;
+//        return;
     }
     
     //添加蒙版,再添加View
@@ -289,6 +292,14 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     parameters[@"password"]= item.password;
     [_mgr POST:askingURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@", responseObject);
+        TableOpenRequestItem *item = [TableOpenRequestItem mj_objectWithKeyValues:responseObject];
+        if (1 == item.msg.integerValue) {
+            //提交成功进入选菜界面
+            if ([self.delegate respondsToSelector:@selector(jumpToOrderViewController)]) {
+                [self.delegate jumpToOrderViewController];
+            }
+        }
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"\nerror:\n%@", error);
         [SVProgressHUD showErrorWithStatus:@"请求桌子信息失败\n请稍后尝试"];

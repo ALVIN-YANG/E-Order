@@ -34,8 +34,12 @@
 		39DBAF871CDCDB9D00472BD3 /* ConfirmAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DBAF851CDCDB9D00472BD3 /* ConfirmAlertView.xib */; };
 		39DBAF8A1CDCDC3800472BD3 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAF891CDCDC3800472BD3 /* OrderViewController.m */; };
 		39DBAF8C1CDCDC4D00472BD3 /* OrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39DBAF8B1CDCDC4D00472BD3 /* OrderViewController.storyboard */; };
-		39DBAF8F1CDCDF3200472BD3 /* DishCatagoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAF8E1CDCDF3200472BD3 /* DishCatagoryItem.m */; };
+		39DBAF8F1CDCDF3200472BD3 /* DishCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAF8E1CDCDF3200472BD3 /* DishCategoryItem.m */; };
 		39DBAF921CDCDF4F00472BD3 /* DishDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAF911CDCDF4F00472BD3 /* DishDetailItem.m */; };
+		39DBAF9B1CDCEC8C00472BD3 /* DishCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAF991CDCEC8C00472BD3 /* DishCategoryCell.m */; };
+		39DBAF9C1CDCEC8C00472BD3 /* DishCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DBAF9A1CDCEC8C00472BD3 /* DishCategoryCell.xib */; };
+		39DBAFA01CDCECC900472BD3 /* DishDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAF9E1CDCECC900472BD3 /* DishDetailCell.m */; };
+		39DBAFA11CDCECC900472BD3 /* DishDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DBAF9F1CDCECC900472BD3 /* DishDetailCell.xib */; };
 		741E8F4EC4CB225E445478E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 248616290AC986259E2BDCBE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,10 +103,16 @@
 		39DBAF881CDCDC3800472BD3 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
 		39DBAF891CDCDC3800472BD3 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 		39DBAF8B1CDCDC4D00472BD3 /* OrderViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrderViewController.storyboard; sourceTree = "<group>"; };
-		39DBAF8D1CDCDF3200472BD3 /* DishCatagoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCatagoryItem.h; sourceTree = "<group>"; };
-		39DBAF8E1CDCDF3200472BD3 /* DishCatagoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCatagoryItem.m; sourceTree = "<group>"; };
+		39DBAF8D1CDCDF3200472BD3 /* DishCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCategoryItem.h; sourceTree = "<group>"; };
+		39DBAF8E1CDCDF3200472BD3 /* DishCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCategoryItem.m; sourceTree = "<group>"; };
 		39DBAF901CDCDF4F00472BD3 /* DishDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishDetailItem.h; sourceTree = "<group>"; };
 		39DBAF911CDCDF4F00472BD3 /* DishDetailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishDetailItem.m; sourceTree = "<group>"; };
+		39DBAF981CDCEC8C00472BD3 /* DishCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCategoryCell.h; sourceTree = "<group>"; };
+		39DBAF991CDCEC8C00472BD3 /* DishCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCategoryCell.m; sourceTree = "<group>"; };
+		39DBAF9A1CDCEC8C00472BD3 /* DishCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishCategoryCell.xib; sourceTree = "<group>"; };
+		39DBAF9D1CDCECC900472BD3 /* DishDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishDetailCell.h; sourceTree = "<group>"; };
+		39DBAF9E1CDCECC900472BD3 /* DishDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishDetailCell.m; sourceTree = "<group>"; };
+		39DBAF9F1CDCECC900472BD3 /* DishDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishDetailCell.xib; sourceTree = "<group>"; };
 		A2D0064B670A02FB3B72F2B2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C0D241995042D1864D62F6C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -371,8 +381,8 @@
 		39DBAF811CDCDB6700472BD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				39DBAF8D1CDCDF3200472BD3 /* DishCatagoryItem.h */,
-				39DBAF8E1CDCDF3200472BD3 /* DishCatagoryItem.m */,
+				39DBAF8D1CDCDF3200472BD3 /* DishCategoryItem.h */,
+				39DBAF8E1CDCDF3200472BD3 /* DishCategoryItem.m */,
 				39DBAF901CDCDF4F00472BD3 /* DishDetailItem.h */,
 				39DBAF911CDCDF4F00472BD3 /* DishDetailItem.m */,
 			);
@@ -382,6 +392,12 @@
 		39DBAF821CDCDB6700472BD3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				39DBAF981CDCEC8C00472BD3 /* DishCategoryCell.h */,
+				39DBAF991CDCEC8C00472BD3 /* DishCategoryCell.m */,
+				39DBAF9A1CDCEC8C00472BD3 /* DishCategoryCell.xib */,
+				39DBAF9D1CDCECC900472BD3 /* DishDetailCell.h */,
+				39DBAF9E1CDCECC900472BD3 /* DishDetailCell.m */,
+				39DBAF9F1CDCECC900472BD3 /* DishDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,6 +506,7 @@
 			files = (
 				39DBAF7E1CDCA10200472BD3 /* SelectTebleCell.xib in Resources */,
 				39BDDEB31CDB1A9F00CB1F89 /* SelectTabelController.storyboard in Resources */,
+				39DBAFA11CDCECC900472BD3 /* DishDetailCell.xib in Resources */,
 				391928EA1CDA0E310043E83A /* DCLoginViewController.storyboard in Resources */,
 				39BDDEB11CDB134500CB1F89 /* DCMainViewController.storyboard in Resources */,
 				39BDDEEE1CDB5DC000CB1F89 /* SelectCollectionCell.xib in Resources */,
@@ -497,6 +514,7 @@
 				391928B91CD9EC4E0043E83A /* Assets.xcassets in Resources */,
 				39DBAF871CDCDB9D00472BD3 /* ConfirmAlertView.xib in Resources */,
 				39DBAF8C1CDCDC4D00472BD3 /* OrderViewController.storyboard in Resources */,
+				39DBAF9C1CDCEC8C00472BD3 /* DishCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,16 +581,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				39DBAF921CDCDF4F00472BD3 /* DishDetailItem.m in Sources */,
-				39DBAF8F1CDCDF3200472BD3 /* DishCatagoryItem.m in Sources */,
+				39DBAF8F1CDCDF3200472BD3 /* DishCategoryItem.m in Sources */,
 				39DBAF7D1CDCA10200472BD3 /* SelectTebleCell.m in Sources */,
 				39BDDEAF1CDB132800CB1F89 /* DCMainViewController.m in Sources */,
 				39BDDF091CDC74E700CB1F89 /* TableOpenRequestItem.m in Sources */,
 				39DBAF8A1CDCDC3800472BD3 /* OrderViewController.m in Sources */,
 				39BDDEED1CDB5DC000CB1F89 /* SelectCollectionCell.m in Sources */,
+				39DBAFA01CDCECC900472BD3 /* DishDetailCell.m in Sources */,
 				39BDDEF11CDB76B700CB1F89 /* TableCategoryItem.m in Sources */,
 				391928DF1CDA042A0043E83A /* Global.m in Sources */,
 				39DBAF791CDCA06400472BD3 /* CustomNavigationController.m in Sources */,
 				391928E81CDA0A140043E83A /* DCLoginViewController.m in Sources */,
+				39DBAF9B1CDCEC8C00472BD3 /* DishCategoryCell.m in Sources */,
 				391928E51CDA08EE0043E83A /* UIImage+Circle.m in Sources */,
 				391928DB1CDA00100043E83A /* AppDelegate.m in Sources */,
 				39BDDE9A1CDAF34700CB1F89 /* LoginViewItem.m in Sources */,

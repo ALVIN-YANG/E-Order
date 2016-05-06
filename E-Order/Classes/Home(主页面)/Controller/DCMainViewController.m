@@ -8,23 +8,41 @@
 
 #import "DCMainViewController.h"
 #import "SelectTabelController.h"
+#import "OrderViewController.h"
 
-@interface DCMainViewController ()
+@interface DCMainViewController ()<SelectTabelControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containView;
 
+@property (nonatomic, weak)SelectTabelController *selTableVC;
 @end
 
 @implementation DCMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    SelectTabelController *selTableVC = [[UIStoryboard storyboardWithName:NSStringFromClass([SelectTabelController class]) bundle:nil] instantiateInitialViewController];
     
+    self.selTableVC = [[UIStoryboard storyboardWithName:NSStringFromClass([SelectTabelController class]) bundle:nil] instantiateInitialViewController];
+    self.selTableVC.delegate = self;
     //此句非常重要
-    [self addChildViewController:selTableVC];
+    [self addChildViewController:_selTableVC];
     
-    [self.containView addSubview:selTableVC.view];
-    selTableVC.view.frame = self.containView.bounds;
+    [self.containView addSubview:_selTableVC.view];
+    _selTableVC.view.frame = self.containView.bounds;
+}
+
+#pragma mark - SelectTabelControllerDelegate
+- (void)jumpToOrderViewController
+{
+#warning 想移除子控制器的
+    [self.selTableVC.view removeFromSuperview];
+    self.selTableVC = nil;
+    
+    OrderViewController *orderVC = [[UIStoryboard storyboardWithName:NSStringFromClass([OrderViewController class]) bundle:nil] instantiateInitialViewController];
+    //此句非常重要
+    [self addChildViewController:orderVC];
+    
+    [self.containView addSubview:orderVC.view];
+    orderVC.view.frame = self.containView.bounds;
 }
 
 

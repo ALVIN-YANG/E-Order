@@ -62,8 +62,8 @@
 
     NSString *askString = [NSString stringWithFormat:@"%@/Home/user/ajaxlogin", DCBaseUrl];
     [self.mgr POST:askString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        LoginViewItem *dcVC = [LoginViewItem mj_objectWithKeyValues:responseObject];
-        if (1 == dcVC.msg) {
+        LoginViewItem *item = [LoginViewItem mj_objectWithKeyValues:responseObject];
+        if (1 == item.msg) {
             //进入主界面
             DCMainViewController *mainVC = [[UIStoryboard storyboardWithName:NSStringFromClass([DCMainViewController class]) bundle:nil] instantiateInitialViewController];
             [self.navigationController pushViewController:mainVC animated:YES];

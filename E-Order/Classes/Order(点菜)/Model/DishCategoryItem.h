@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DishCatagoryItem : NSObject
+@interface DishCategoryItem : NSObject
 /**
  *  菜品分类ID
  */

@@ -25,4 +25,8 @@
  *  开桌密码
  */
 @property (nonatomic, copy)NSString *password;
+/**
+ *  msg
+ */
+@property (nonatomic, copy) NSString *msg;
 @end

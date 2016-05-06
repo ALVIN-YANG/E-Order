@@ -5,26 +5,87 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Order View Controller-->
         <scene sceneID="2cF-6x-7OD">
             <objects>
-                <viewController id="cLp-fb-1D3" sceneMemberID="viewController">
+                <viewController id="cLp-fb-1D3" customClass="OrderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HUL-ja-Kdf"/>
                         <viewControllerLayoutGuide type="bottom" id="sG5-7w-aqj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VBh-bE-Xi3">
+                    <view key="view" contentMode="scaleToFill" id="rN8-rh-kwc">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t2l-7F-Y28">
+                                <rect key="frame" x="0.0" y="10" width="180" height="708"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="lce-hL-xdZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="cLp-fb-1D3" id="AdN-tG-IlL"/>
+                                    <outlet property="delegate" destination="cLp-fb-1D3" id="tZA-XK-jpv"/>
+                                </connections>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-Co-Km4">
+                                <rect key="frame" x="190" y="10" width="824" height="758"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o28-Cb-bOB">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4UY-hp-RG8">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZB-Ga-dFz">
+                                <rect key="frame" x="0.0" y="718" width="180" height="50"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.46274509803921571" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title=" 已点菜品" image="myorder_normal"/>
+                                <connections>
+                                    <action selector="alreadyDishButtonClick:" destination="cLp-fb-1D3" eventType="touchUpInside" id="7Df-nM-E3b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.077879749240000004" green="0.82499533889999999" blue="0.54516422750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GZB-Ga-dFz" firstAttribute="top" secondItem="t2l-7F-Y28" secondAttribute="bottom" id="C0q-HK-cQM"/>
+                            <constraint firstItem="ta3-Co-Km4" firstAttribute="leading" secondItem="t2l-7F-Y28" secondAttribute="trailing" constant="10" id="PN0-RU-x3Q"/>
+                            <constraint firstItem="ta3-Co-Km4" firstAttribute="top" secondItem="rN8-rh-kwc" secondAttribute="top" constant="10" id="RcX-JY-8MH"/>
+                            <constraint firstItem="GZB-Ga-dFz" firstAttribute="leading" secondItem="rN8-rh-kwc" secondAttribute="leading" id="Rzx-pm-VT7"/>
+                            <constraint firstItem="t2l-7F-Y28" firstAttribute="leading" secondItem="rN8-rh-kwc" secondAttribute="leading" id="ZoM-B0-2xK"/>
+                            <constraint firstAttribute="trailing" secondItem="ta3-Co-Km4" secondAttribute="trailing" constant="10" id="fHX-aJ-HAg"/>
+                            <constraint firstItem="t2l-7F-Y28" firstAttribute="top" secondItem="rN8-rh-kwc" secondAttribute="top" constant="10" id="l0m-xd-TDt"/>
+                            <constraint firstAttribute="bottom" secondItem="GZB-Ga-dFz" secondAttribute="bottom" id="lYd-fJ-VWV"/>
+                            <constraint firstItem="ta3-Co-Km4" firstAttribute="leading" secondItem="GZB-Ga-dFz" secondAttribute="trailing" constant="10" id="mej-qD-kup"/>
+                            <constraint firstAttribute="bottom" secondItem="t2l-7F-Y28" secondAttribute="bottom" constant="50" id="qkV-2C-o7j"/>
+                            <constraint firstAttribute="bottom" secondItem="ta3-Co-Km4" secondAttribute="bottom" id="vDK-Ev-mxL"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ta3-Co-Km4" id="5XP-6H-JfH"/>
+                        <outlet property="tableView" destination="t2l-7F-Y28" id="UoY-ul-x3b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tey-EX-YaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="271" y="377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="myorder_normal" width="51" height="51"/>
+    </resources>
 </document>
