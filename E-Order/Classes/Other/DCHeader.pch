@@ -28,4 +28,10 @@
 #define CollectionW
 #define CollectionH
 
+//url
+#define localURL  @"http://192.168.31.108/newboll/index.php"
+#define onLineURL  @"http://newboll.jqc.pw/index.php"
+
+#define DCBaseUrl  onLineURL
+
 #endif /* DCHeader_pch */

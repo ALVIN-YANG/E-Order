@@ -6,4 +6,3 @@
 //  Copyright © 2016年 杨卢青. All rights reserved.
 //
 
-extern NSString * const DCBaseUrl;

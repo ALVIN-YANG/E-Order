@@ -61,4 +61,15 @@
 - (void)back{
     [self popViewControllerAnimated:YES];
 }
+
+
+/**
+ *  限制当前屏幕支持的屏幕方向
+ *
+ *  @return 屏幕方向
+ */
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscape;
+}
 @end

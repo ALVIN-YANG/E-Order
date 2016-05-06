@@ -25,6 +25,8 @@
     CustomNavigationController *nav =[[CustomNavigationController alloc]initWithRootViewController:DCVC];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

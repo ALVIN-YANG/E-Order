@@ -74,7 +74,6 @@
         if (error.code == NSURLErrorCancelled) return;
         [SVProgressHUD showErrorWithStatus:@"网络繁忙,稍后尝试"];
     }];
-
 }
 - (IBAction)employeeButtonClick:(id)sender {
 }

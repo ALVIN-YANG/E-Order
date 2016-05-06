@@ -7,19 +7,27 @@
 //
 
 #import "SelectTabelController.h"
+
+//cell
 #import "SelectTebleCell.h"
 #import "SelectCollectionCell.h"
+
 //楼层数据模型
 #import "TableCategoryItem.h"
 //楼层对应桌子数据模型
 #import "TableStatusItem.h"
+//发送桌位信息模型
+#import "TableOpenRequestItem.h"
+
+//提示开桌View
+#import "ConfirmAlertView.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <MJExtension.h>
 
 
 
-@interface SelectTabelController ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface SelectTabelController ()<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, ConfirmAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -29,6 +37,11 @@
 @property (nonatomic, strong) NSArray *tableStatusArray;
 //请求管理
 @property (nonatomic, strong) AFHTTPSessionManager *mgr;
+
+//确认View
+@property (nonatomic, strong) ConfirmAlertView *confirmView;
+//蒙版view
+@property (nonatomic, strong) UIView *grayView;
 @end
 
 
@@ -66,7 +79,7 @@ static NSString * const CellIDforCollection = @"CollectionCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //请求楼号和楼号对应桌位状态数据
+    //请求楼号数据
     [self requestTableCategoryData];
     //几楼
     [self setupTableView];
@@ -75,7 +88,7 @@ static NSString * const CellIDforCollection = @"CollectionCell";
 }
 
 #pragma mark - Helpers
-//请求楼号和楼号对应桌位状态数据
+//请求楼号数据
 - (void)requestTableCategoryData
 {
 
@@ -154,6 +167,12 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     [self.view addSubview:self.collectionView];
 }
 
+//结束确认弹窗的编辑状态
+- (void)endConfirmViewEditing
+{
+    [self.confirmView endAllTextFieldEdit];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -169,9 +188,15 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.tableView.height/12;
+}
+
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //请求对应collection数据
     TableCategoryItem *item = self.tableCategoryArray[indexPath.row];
     [self requestTableStatusData:item.table_category_id];
 }
@@ -200,5 +225,91 @@ static NSString * const CellIDforCollection = @"CollectionCell";
         cell.tableNumberLabel.tintColor = Color(244, 186, 87);
     }
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TableStatusItem *item = self.tableStatusArray[indexPath.row];
+    
+    //如果桌位已满则点击无效
+    if (1 == item.status.integerValue) {
+        return;
+    }
+    
+    //添加蒙版,再添加View
+    self.grayView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _grayView.backgroundColor = [UIColor blackColor];
+    _grayView.alpha = 0.7;
+    //添加点击手势, 点击蒙版, 退出编辑状态
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endConfirmViewEditing)];
+    [_grayView addGestureRecognizer:tapGes];
+    
+    //为了遮挡住最上层View
+    [self.view.superview.superview addSubview:self.grayView];
+    
+    self.confirmView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ConfirmAlertView class]) owner:self options:nil] lastObject];
+    _confirmView.center = _grayView.center;
+    _confirmView.size = CGSizeMake(ScreenW/3, ScreenH/3);
+    _confirmView.titleLabel.text = [NSString stringWithFormat:@"将要打开桌位:%@", item.number];
+    //传入ID
+    _confirmView.item.tableid = item.table_id;
+    _confirmView.delegate = self;
+    [self.view.superview.superview addSubview:self.confirmView];
+}
+
+#pragma mark - ConfirmAlertViewDelegate
+/**
+ *  点击取消
+ */
+- (void)didCancleButtonClick
+{
+    [self.grayView removeFromSuperview];
+    [self.confirmView removeFromSuperview];
+    self.grayView = nil;
+    self.confirmView = nil;
+}
+/**
+ *  点击确认, 给数据库当前桌位信息, 并跳转到点菜界面
+ *
+ *  @param item 桌位信息数据模型
+ */
+- (void)didConfirmButtonClickWithItem:(TableOpenRequestItem *)item
+{
+    [self didCancleButtonClick];
+    
+    NSLog(@"\n 人数 : %@ \n 服务员 : %@ \n 密码 : %@", item.count, item.waiter, item.password);
+    //发送请求
+    NSString *followURL = @"/Home/user/tablestatus";
+    NSString *askingURL = [NSString stringWithFormat:@"%@%@", DCBaseUrl, followURL];
+
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"tableid"] = item.tableid;
+    parameters[@"warter"]  = item.waiter;
+    parameters[@"count"]   = item.count;
+    parameters[@"password"]= item.password;
+    [_mgr POST:askingURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"\nerror:\n%@", error);
+        [SVProgressHUD showErrorWithStatus:@"请求桌子信息失败\n请稍后尝试"];
+    }];
+}
+/**
+ *  用户开始编辑桌位信息时, 弹窗上移
+ */
+- (void)userBeginEdit
+{
+    [UIView animateWithDuration:0.4 animations:^{
+        self.confirmView.y -= 142;
+    }];
+}
+/**
+ *  用户退出编辑时, 弹窗复位
+ */
+- (void)userEndEdit
+{
+    [UIView animateWithDuration:0.4 animations:^{
+        self.confirmView.y += 142;
+    }];
 }
 @end
