@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DishTableNumberCell" id="KGk-i7-Jjw" customClass="DishTableNumberCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="桌位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-Nx-OyU">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.45098039215686275" green="0.42745098039215684" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAc-p4-Wuc">
+                        <rect key="frame" x="160" y="0.0" width="160" height="43.5"/>
+                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
+                        <color key="textColor" red="0.49019607843137253" green="0.66274509803921566" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0t-6E-VBO">
+                        <rect key="frame" x="159.5" y="0.0" width="1" height="43.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="SCs-gl-ywX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.99607843137254903" green="0.95686274509803915" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FkX-Nx-OyU" secondAttribute="bottom" id="0DH-PK-wLt"/>
+                    <constraint firstAttribute="bottom" secondItem="LAc-p4-Wuc" secondAttribute="bottom" id="BF8-kV-uqI"/>
+                    <constraint firstItem="FkX-Nx-OyU" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="Ebk-9j-XWb"/>
+                    <constraint firstItem="z0t-6E-VBO" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="Rjr-AI-zWb"/>
+                    <constraint firstItem="z0t-6E-VBO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SFH-Yx-cCr"/>
+                    <constraint firstItem="LAc-p4-Wuc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X62-Rt-ccm"/>
+                    <constraint firstItem="FkX-Nx-OyU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eab-gc-gwf"/>
+                    <constraint firstItem="FkX-Nx-OyU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fhG-Of-FBg"/>
+                    <constraint firstItem="z0t-6E-VBO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fr1-m3-aLw"/>
+                    <constraint firstItem="FkX-Nx-OyU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hXz-38-Gng"/>
+                    <constraint firstItem="LAc-p4-Wuc" firstAttribute="leading" secondItem="FkX-Nx-OyU" secondAttribute="trailing" id="res-A4-Pgv"/>
+                    <constraint firstAttribute="trailing" secondItem="LAc-p4-Wuc" secondAttribute="trailing" id="tam-in-JaX"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="fhG-Of-FBg"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

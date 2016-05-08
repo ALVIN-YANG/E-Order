@@ -25,5 +25,17 @@
  *  company_id
  */
 @property (nonatomic, copy) NSString *company_id;
+/**
+ *  子分类 字典数组
+ */
+@property (nonatomic, copy) NSArray *child;
+/**
+ *  是否是展开cell状态
+ */
+@property (nonatomic ,assign ,getter=isSpread)BOOL spreadStatus;
+/**
+ *  当前是否被选中
+ */
+@property (nonatomic ,assign ,getter=isSelected)BOOL selectedStatus;
 
 @end

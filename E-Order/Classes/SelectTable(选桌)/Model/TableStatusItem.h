@@ -12,7 +12,8 @@
 /**
  *  楼号
  */
-@property (nonatomic, copy)NSString *catename;
+@property (nonatomic
+           , copy)NSString *catename;
 /**
  *  桌名
  */

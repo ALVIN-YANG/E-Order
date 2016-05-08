@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DishDetailCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
+@property (weak, nonatomic) IBOutlet UILabel *dishNaleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 
 @end

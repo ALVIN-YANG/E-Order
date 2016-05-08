@@ -11,6 +11,5 @@
 @interface DishCategoryCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *CategoryNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sorLabel;
-@property (weak, nonatomic) IBOutlet UILabel *CategorySubLabel;
 
 @end

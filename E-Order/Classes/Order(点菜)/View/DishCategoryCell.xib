@@ -8,13 +8,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" focusStyle="custom" id="8RK-CG-SS2" customClass="DishCategoryCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" focusStyle="custom" id="8RK-CG-SS2" customClass="DishCategoryCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8RK-CG-SS2" id="VXM-bJ-sac">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ef-v8-ZzM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="MCU-QN-Zbs"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快捷点餐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cx-bo-ywP">
                         <rect key="frame" x="0.0" y="0.0" width="290" height="43.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -40,21 +47,24 @@
                     <constraint firstAttribute="bottomMargin" secondItem="iLj-xI-IJo" secondAttribute="bottom" id="Ric-tc-oIe"/>
                     <constraint firstAttribute="trailing" secondItem="iLj-xI-IJo" secondAttribute="trailing" id="TRS-T3-Vuc"/>
                     <constraint firstAttribute="trailing" secondItem="iLj-xI-IJo" secondAttribute="trailing" id="XdA-K0-Q4V"/>
+                    <constraint firstItem="1Ef-v8-ZzM" firstAttribute="top" secondItem="VXM-bJ-sac" secondAttribute="top" id="gYb-QA-XeL"/>
                     <constraint firstItem="3Cx-bo-ywP" firstAttribute="top" secondItem="VXM-bJ-sac" secondAttribute="top" id="llT-QH-aY3"/>
+                    <constraint firstItem="1Ef-v8-ZzM" firstAttribute="leading" secondItem="VXM-bJ-sac" secondAttribute="leading" id="oTS-EK-UNG"/>
                     <constraint firstItem="iLj-xI-IJo" firstAttribute="leading" secondItem="3Cx-bo-ywP" secondAttribute="trailing" id="ovf-Jm-TYh"/>
                     <constraint firstItem="3Cx-bo-ywP" firstAttribute="leading" secondItem="VXM-bJ-sac" secondAttribute="leading" id="qgW-w0-hoL"/>
                     <constraint firstAttribute="bottom" secondItem="3Cx-bo-ywP" secondAttribute="bottom" id="qot-uP-aR4"/>
                     <constraint firstItem="iLj-xI-IJo" firstAttribute="top" secondItem="VXM-bJ-sac" secondAttribute="top" id="tCT-9V-6Mo"/>
+                    <constraint firstAttribute="trailing" secondItem="1Ef-v8-ZzM" secondAttribute="trailing" id="x8R-Mf-enP"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="2oj-kD-dDy"/>
+                        <exclude reference="F2K-Yl-M51"/>
                         <exclude reference="O7S-4q-uqa"/>
                         <exclude reference="PY4-Gn-VHS"/>
                         <exclude reference="Ric-tc-oIe"/>
-                        <exclude reference="2oj-kD-dDy"/>
                         <exclude reference="XdA-K0-Q4V"/>
                         <exclude reference="ovf-Jm-TYh"/>
-                        <exclude reference="F2K-Yl-M51"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

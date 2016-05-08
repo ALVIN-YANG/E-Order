@@ -13,7 +13,6 @@
 @interface DCMainViewController ()<SelectTabelControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containView;
 
-@property (nonatomic, weak)SelectTabelController *selTableVC;
 @end
 
 @implementation DCMainViewController
@@ -21,22 +20,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.selTableVC = [[UIStoryboard storyboardWithName:NSStringFromClass([SelectTabelController class]) bundle:nil] instantiateInitialViewController];
-    self.selTableVC.delegate = self;
-    //此句非常重要
-    [self addChildViewController:_selTableVC];
+    //首先进入选桌界面
+    [self jumpToSelectTableController];
     
-    [self.containView addSubview:_selTableVC.view];
-    _selTableVC.view.frame = self.containView.bounds;
+}
+
+#pragma mark - Helpers
+/**
+ *  进入选桌界面
+ */
+- (void)jumpToSelectTableController
+{
+    //移除ContainView的所有子视图
+    for(UIView *view in [self.containView subviews])
+    {
+        [view removeFromSuperview];
+    }
+    
+    SelectTabelController *selTableVC = [[UIStoryboard storyboardWithName:NSStringFromClass([SelectTabelController class]) bundle:nil] instantiateInitialViewController];
+    selTableVC.delegate = self;
+    //此句非常重要
+    [self addChildViewController:selTableVC];
+    
+    [self.containView addSubview:selTableVC.view];
+    selTableVC.view.frame = self.containView.bounds;
 }
 
 #pragma mark - SelectTabelControllerDelegate
+/**
+ *  进入点菜界面
+ */
 - (void)jumpToOrderViewController
 {
-#warning 想移除子控制器的
-    [self.selTableVC.view removeFromSuperview];
-    self.selTableVC = nil;
+    //移除ContainView的所有子视图
+    for(UIView *view in [self.containView subviews])
+    {
+        [view removeFromSuperview];
+    }
     
+    //创建点菜控制器, 把view加入容器视图
     OrderViewController *orderVC = [[UIStoryboard storyboardWithName:NSStringFromClass([OrderViewController class]) bundle:nil] instantiateInitialViewController];
     //此句非常重要
     [self addChildViewController:orderVC];
@@ -63,7 +85,9 @@
 - (IBAction)fourthButtonClick:(id)sender {
 }
 
+//点击桌位选择
 - (IBAction)selectTableButtonClick:(id)sender {
+    [self jumpToSelectTableController];
 }
 
 - (IBAction)flowButtonClick:(id)sender {
