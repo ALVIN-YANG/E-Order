@@ -29,5 +29,10 @@
  *  菜品图片后缀
  */
 @property (nonatomic, copy) NSString *image;
+/**
+ *  菜品订单数量
+ */
+@property (nonatomic, assign) NSInteger orderCount;
+
 
 @end

@@ -44,6 +44,7 @@
 		39DBAFB61CDDEB6200472BD3 /* DishSubCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DBAFB41CDDEB6200472BD3 /* DishSubCategoryCell.xib */; };
 		39DBAFBA1CDF653D00472BD3 /* DishTableNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAFB81CDF653D00472BD3 /* DishTableNumberCell.m */; };
 		39DBAFBB1CDF653D00472BD3 /* DishTableNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DBAFB91CDF653D00472BD3 /* DishTableNumberCell.xib */; };
+		39DBAFBF1CE0AA3200472BD3 /* ThrowLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 39DBAFBE1CE0AA3200472BD3 /* ThrowLineTool.m */; };
 		741E8F4EC4CB225E445478E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 248616290AC986259E2BDCBE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,8 @@
 		39DBAFB71CDF653D00472BD3 /* DishTableNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishTableNumberCell.h; sourceTree = "<group>"; };
 		39DBAFB81CDF653D00472BD3 /* DishTableNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishTableNumberCell.m; sourceTree = "<group>"; };
 		39DBAFB91CDF653D00472BD3 /* DishTableNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DishTableNumberCell.xib; sourceTree = "<group>"; };
+		39DBAFBD1CE0AA3200472BD3 /* ThrowLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowLineTool.h; sourceTree = "<group>"; };
+		39DBAFBE1CE0AA3200472BD3 /* ThrowLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowLineTool.m; sourceTree = "<group>"; };
 		A2D0064B670A02FB3B72F2B2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C0D241995042D1864D62F6C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -354,6 +357,7 @@
 		39BDDEAB1CDB12E400CB1F89 /* Custom(自定义) */ = {
 			isa = PBXGroup;
 			children = (
+				39DBAFBC1CE0AA3200472BD3 /* Tools */,
 				39BDDEAC1CDB12E400CB1F89 /* Controller */,
 			);
 			path = "Custom(自定义)";
@@ -416,6 +420,15 @@
 				39DBAF9F1CDCECC900472BD3 /* DishDetailCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		39DBAFBC1CE0AA3200472BD3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				39DBAFBD1CE0AA3200472BD3 /* ThrowLineTool.h */,
+				39DBAFBE1CE0AA3200472BD3 /* ThrowLineTool.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		E637F6A4F89B1A1A16D78848 /* Frameworks */ = {
@@ -618,6 +631,7 @@
 				39BDDE9A1CDAF34700CB1F89 /* LoginViewItem.m in Sources */,
 				39BDDEF41CDB837500CB1F89 /* TableStatusItem.m in Sources */,
 				391928E21CDA070D0043E83A /* UIView+Frame.m in Sources */,
+				39DBAFBF1CE0AA3200472BD3 /* ThrowLineTool.m in Sources */,
 				39DBAF861CDCDB9D00472BD3 /* ConfirmAlertView.m in Sources */,
 				39BDDEA71CDAF98200CB1F89 /* SelectTabelController.m in Sources */,
 				391928AE1CD9EC4E0043E83A /* main.m in Sources */,

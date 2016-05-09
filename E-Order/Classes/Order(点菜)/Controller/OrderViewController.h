@@ -13,6 +13,6 @@
 /**
  *  桌名
  */
-@property (nonatomic, copy)NSString *tableName;
+@property (weak, nonatomic) IBOutlet UILabel *tableName;
 
 @end

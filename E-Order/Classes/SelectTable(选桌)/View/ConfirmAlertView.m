@@ -41,8 +41,10 @@
     self.item.count = self.countTextField.text;
     self.item.waiter = self.waiterTextField.text;
     self.item.password = self.passwordTextField.text;
+    self.item.tableName = self.titleLabel.text;
     
-    
+    NSLog(@"\ntitleLabel:\n%@", _titleLabel.text);
+    NSLog(@"\ntitleLabel:\n%@", _item.tableName);
     if ([self.delegate respondsToSelector:@selector(didConfirmButtonClickWithItem:)]) {
         [self.delegate didConfirmButtonClickWithItem:self.item];
     }

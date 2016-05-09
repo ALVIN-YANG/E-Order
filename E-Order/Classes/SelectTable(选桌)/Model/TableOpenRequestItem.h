@@ -29,4 +29,8 @@
  *  msg
  */
 @property (nonatomic, copy) NSString *msg;
+/**
+ *  桌名
+ */
+@property (nonatomic, copy) NSString *tableName;
 @end

@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DishDetailItem, DishDetailCell;
+@protocol DishDetailCellDelegate <NSObject>
+
+- (void)clickDishAddButton:(DishDetailCell *)cell;
+- (void)clickDishMinusButton:(DishDetailCell *)cell;
+
+@end
 
 @interface DishDetailCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
-@property (weak, nonatomic) IBOutlet UILabel *dishNaleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 
+@property (nonatomic, strong) DishDetailItem *item;
+
+//+
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+
+//代理
+@property (nonatomic, weak) id<DishDetailCellDelegate> delegate;
 @end

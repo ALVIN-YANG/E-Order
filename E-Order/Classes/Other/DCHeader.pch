@@ -36,5 +36,6 @@
 #define onLineURL  @"http://newboll.jqc.pw/index.php"
 
 #define DCBaseUrl  onLineURL
+#define DCBaseImage @"http://newboll.jqc.pw"
 
 #endif /* DCHeader_pch */

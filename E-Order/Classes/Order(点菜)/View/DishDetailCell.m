@@ -7,12 +7,67 @@
 //
 
 #import "DishDetailCell.h"
+#import "DishDetailItem.h"
+#import <UIImageView+WebCache.h>
 
+@interface DishDetailCell()
+@property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
+@property (weak, nonatomic) IBOutlet UILabel *dishNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+//单位
+@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
+
+//-
+@property (weak, nonatomic) IBOutlet UIButton *minusButton;
+//6
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@end
 @implementation DishDetailCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+//接收数据, 来到setter
+- (void)setItem:(DishDetailItem *)item
+{
+    _item = item;
+    self.dishNameLabel.text = item.name;
+    [self.dishImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", DCBaseImage, item.image]]];
+    self.priceLabel.text = item.price;
+    
+    //按钮逻辑
+    if (item.orderCount > 0) {
+        [self.minusButton setHidden:NO];
+        [self.countLabel setHidden:NO];
+    } else {
+        [self.minusButton setHidden:YES];
+        [self.countLabel setHidden:YES];
+    }
 }
 
+- (IBAction)addButtonClick:(id)sender {
+    //修改模型
+    _item.orderCount++;
+    _countLabel.text = [NSString stringWithFormat:@"%ld", _item.orderCount];
+    _minusButton.hidden = NO;
+    _countLabel.hidden = NO;
+    
+    // 通知代理（调用代理的方法）
+    if ([self.delegate respondsToSelector:@selector(clickDishAddButton:)]) {
+        [self.delegate clickDishAddButton:self];
+    }
+}
+- (IBAction)minusButton:(id)sender {
+    
+    _item.orderCount--;
+    _countLabel.text = [NSString stringWithFormat:@"%ld", _item.orderCount];
+    
+    if (_item.orderCount == 0) {
+        _minusButton.hidden = YES;
+        _countLabel.hidden = YES;
+    }
+
+    
+    if ([self.delegate respondsToSelector:@selector(clickDishMinusButton:)]) {
+        [self.delegate clickDishMinusButton:self];
+    }
+}
 @end

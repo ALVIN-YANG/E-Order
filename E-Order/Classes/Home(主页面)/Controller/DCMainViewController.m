@@ -50,7 +50,7 @@
 /**
  *  进入点菜界面
  */
-- (void)jumpToOrderViewController
+- (void)jumpToOrderViewControllerWithTableName:(NSString *)tableName
 {
     //移除ContainView的所有子视图
     for(UIView *view in [self.containView subviews])
@@ -60,10 +60,12 @@
     
     //创建点菜控制器, 把view加入容器视图
     OrderViewController *orderVC = [[UIStoryboard storyboardWithName:NSStringFromClass([OrderViewController class]) bundle:nil] instantiateInitialViewController];
+    
     //此句非常重要
     [self addChildViewController:orderVC];
     
     [self.containView addSubview:orderVC.view];
+    orderVC.tableName.text = tableName;
     orderVC.view.frame = self.containView.bounds;
 }
 

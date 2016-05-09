@@ -10,7 +10,7 @@
 
 @protocol SelectTabelControllerDelegate <NSObject>
 
-- (void)jumpToOrderViewController;
+- (void)jumpToOrderViewControllerWithTableName:(NSString *)tableName;
 
 @end
 @interface SelectTabelController : UIViewController

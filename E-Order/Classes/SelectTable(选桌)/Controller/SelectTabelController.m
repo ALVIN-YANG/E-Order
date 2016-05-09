@@ -45,6 +45,8 @@
 @property (nonatomic, strong) ConfirmAlertView *confirmView;
 //蒙版view
 @property (nonatomic, strong) UIView *grayView;
+//记录tableName
+@property (nonatomic, copy) NSString *tableName;
 @end
 
 
@@ -98,9 +100,6 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     NSString *followURL = @"/Home/user/tablecategory";
     NSString *askingURL = [NSString stringWithFormat:@"%@%@", DCBaseUrl, followURL];
     [self.mgr POST:askingURL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSLog(@"\n楼层分类数据:\n%@", responseObject);
-        
         //得到楼层数据
         self.tableCategoryArray = [TableCategoryItem mj_objectArrayWithKeyValuesArray:responseObject];
         //刷新tableView
@@ -127,8 +126,7 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     parameters[@"tableid"] = catagoryID;
     
     [self.mgr POST:saskingURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"\n楼号对应桌位数据\n\n%@", responseObject);
-         [responseObject writeToFile:@"/Users/YLQ/Desktop/Eplist/桌子状态.plist" atomically:YES];
+
         //得到桌子数据
         self.tableStatusArray = [TableStatusItem mj_objectArrayWithKeyValuesArray:responseObject];
         //刷新collectionView
@@ -254,6 +252,8 @@ static NSString * const CellIDforCollection = @"CollectionCell";
     _confirmView.center = _grayView.center;
     _confirmView.size = CGSizeMake(ScreenW/3, ScreenH/3);
     _confirmView.titleLabel.text = [NSString stringWithFormat:@"将要打开桌位:%@", item.number];
+    //记录桌名, 传递
+    self.tableName = item.number;
     //传入ID
     _confirmView.item.tableid = item.table_id;
     _confirmView.delegate = self;
@@ -279,8 +279,7 @@ static NSString * const CellIDforCollection = @"CollectionCell";
 - (void)didConfirmButtonClickWithItem:(TableOpenRequestItem *)item
 {
     [self didCancleButtonClick];
-    
-    NSLog(@"\n 人数 : %@ \n 服务员 : %@ \n 密码 : %@", item.count, item.waiter, item.password);
+    NSLog(@"\n 人数 : %@ \n 服务员 : %@ \n 密码 : %@ \n 桌名: %@", item.count, item.waiter, item.password, item.tableName);
     //发送请求
     NSString *followURL = @"/Home/user/tablestatus";
     NSString *askingURL = [NSString stringWithFormat:@"%@%@", DCBaseUrl, followURL];
@@ -295,8 +294,8 @@ static NSString * const CellIDforCollection = @"CollectionCell";
         TableOpenRequestItem *item = [TableOpenRequestItem mj_objectWithKeyValues:responseObject];
         if (1 == item.msg.integerValue) {
             //提交成功进入选菜界面
-            if ([self.delegate respondsToSelector:@selector(jumpToOrderViewController)]) {
-                [self.delegate jumpToOrderViewController];
+            if ([self.delegate respondsToSelector:@selector(jumpToOrderViewControllerWithTableName:)]) {
+                [self.delegate jumpToOrderViewControllerWithTableName:self.tableName];
             }
         }
 
