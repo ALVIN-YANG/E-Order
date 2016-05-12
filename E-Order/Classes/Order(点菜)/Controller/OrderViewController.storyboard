@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cLp-fb-1D3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cLp-fb-1D3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -20,18 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t2l-7F-Y28">
-                                <rect key="frame" x="0.0" y="70" width="180" height="648"/>
+                                <rect key="frame" x="0.0" y="70" width="205" height="648"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="lce-hL-xdZ"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lce-hL-xdZ"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="cLp-fb-1D3" id="AdN-tG-IlL"/>
                                     <outlet property="delegate" destination="cLp-fb-1D3" id="tZA-XK-jpv"/>
                                 </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ta3-Co-Km4">
-                                <rect key="frame" x="190" y="10" width="824" height="758"/>
+                                <rect key="frame" x="215" y="10" width="799" height="758"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o28-Cb-bOB">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,7 +55,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZB-Ga-dFz">
-                                <rect key="frame" x="0.0" y="718" width="180" height="50"/>
+                                <rect key="frame" x="0.0" y="718" width="205" height="50"/>
                                 <color key="backgroundColor" red="0.92549019607843142" green="0.46274509803921571" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title=" 已点菜品" image="myorder_normal"/>
                                 <connections>
@@ -59,7 +63,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aY-iz-bHE">
-                                <rect key="frame" x="140" y="708" width="30" height="30"/>
+                                <rect key="frame" x="165" y="708" width="30" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="0N2-BE-wxV"/>
@@ -70,22 +74,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-aU-5AC">
-                                <rect key="frame" x="0.0" y="10" width="180" height="60"/>
+                                <rect key="frame" x="0.0" y="10" width="205" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q8-2s-Rqo">
-                                        <rect key="frame" x="90" y="0.0" width="90" height="60"/>
+                                        <rect key="frame" x="102.5" y="0.0" width="102.5" height="60"/>
                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="27"/>
                                         <color key="textColor" red="0.49019607840000001" green="0.66274509800000003" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="桌位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-gR-MUb">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.45098039220000002" green="0.42745098040000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-UM-xGK">
-                                        <rect key="frame" x="89" y="0.0" width="1" height="60"/>
+                                        <rect key="frame" x="102" y="0.0" width="1" height="60"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="0.5" id="RWw-7s-9dG"/>
@@ -116,6 +120,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.077879749240000004" green="0.82499533889999999" blue="0.54516422750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="t2l-7F-Y28" firstAttribute="width" secondItem="rN8-rh-kwc" secondAttribute="width" multiplier="0.2" id="3VZ-ki-Kse"/>
                             <constraint firstItem="GZB-Ga-dFz" firstAttribute="top" secondItem="t2l-7F-Y28" secondAttribute="bottom" id="C0q-HK-cQM"/>
                             <constraint firstItem="t2l-7F-Y28" firstAttribute="top" secondItem="t8c-aU-5AC" secondAttribute="bottom" id="Flh-D6-5sc"/>
                             <constraint firstItem="ta3-Co-Km4" firstAttribute="leading" secondItem="t2l-7F-Y28" secondAttribute="trailing" constant="10" id="PN0-RU-x3Q"/>
@@ -137,7 +142,8 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="collectionView" destination="ta3-Co-Km4" id="5XP-6H-JfH"/>
                         <outlet property="tableName" destination="7Q8-2s-Rqo" id="0db-tM-YhA"/>
@@ -146,45 +152,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tey-EX-YaF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DishTableNumberCell" id="RUA-jG-btT" customClass="DishTableNumberCell">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RUA-jG-btT" id="4bu-fe-mpT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="桌位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-xg-K2n">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="43.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.45098039220000002" green="0.42745098040000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK9-1g-O7f">
-                                <rect key="frame" x="159.5" y="0.0" width="1" height="43.5"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1" id="kKq-8m-Wss"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="aO5-xg-K2n" firstAttribute="leading" secondItem="4bu-fe-mpT" secondAttribute="leadingMargin" id="0A6-L6-Z8m"/>
-                            <constraint firstAttribute="bottom" secondItem="aO5-xg-K2n" secondAttribute="bottom" id="AW4-RY-OLi"/>
-                            <constraint firstItem="aO5-xg-K2n" firstAttribute="width" secondItem="4bu-fe-mpT" secondAttribute="width" multiplier="0.5" id="Ffo-3c-E8l"/>
-                            <constraint firstItem="SK9-1g-O7f" firstAttribute="height" secondItem="4bu-fe-mpT" secondAttribute="height" id="Hlh-LU-XxJ"/>
-                            <constraint firstItem="SK9-1g-O7f" firstAttribute="centerX" secondItem="4bu-fe-mpT" secondAttribute="centerX" id="cSN-1w-N7P"/>
-                            <constraint firstItem="aO5-xg-K2n" firstAttribute="top" secondItem="4bu-fe-mpT" secondAttribute="top" id="hyQ-cc-QgE"/>
-                            <constraint firstItem="SK9-1g-O7f" firstAttribute="top" secondItem="4bu-fe-mpT" secondAttribute="top" id="pjc-2y-2Iv"/>
-                            <constraint firstItem="aO5-xg-K2n" firstAttribute="leading" secondItem="4bu-fe-mpT" secondAttribute="leading" id="xSE-dk-fJn"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="0A6-L6-Z8m"/>
-                            </mask>
-                        </variation>
-                    </tableViewCellContentView>
-                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="271" y="377"/>
         </scene>

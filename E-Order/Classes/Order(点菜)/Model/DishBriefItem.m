@@ -6,8 +6,8 @@
 //  Copyright © 2016年 杨卢青. All rights reserved.
 //
 
-#import "DishDetailItem.h"
+#import "DishBriefItem.h"
 
-@implementation DishDetailItem
+@implementation DishBriefItem
 
 @end

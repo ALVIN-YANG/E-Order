@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DishDetailItem : NSObject
+@interface DishBriefItem : NSObject
 /**
  *  菜品ID
  */
@@ -22,9 +22,21 @@
  */
 @property (nonatomic, copy) NSString *name;
 /**
+ *  菜品介绍
+ */
+@property (nonatomic, copy) NSString *content;
+/**
+ *  配套
+ */
+@property (nonatomic, copy) NSArray *peitao;
+/**
  *  价格
  */
 @property (nonatomic, copy) NSString *price;
+/**
+ *  特殊要求
+ */
+@property (nonatomic, copy) NSArray *teshuyaoqiu;
 /**
  *  菜品图片后缀
  */

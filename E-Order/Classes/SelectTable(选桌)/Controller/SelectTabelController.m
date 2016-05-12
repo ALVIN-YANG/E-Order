@@ -232,6 +232,7 @@ static NSString * const CellIDforCollection = @"CollectionCell";
 {
     TableStatusItem *item = self.tableStatusArray[indexPath.row];
     
+#warning 桌位有限, 测试用, 上线时解除注释
     //如果桌位已满则点击无效
     if (1 == item.status.integerValue) {
 //        return;

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DishPeitaoCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="51"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="51"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="豆芽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeF-33-Bez">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.42352941176470588" green="0.41176470588235292" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-bP-AHt">
+                        <rect key="frame" x="349" y="0.0" width="51" height="51"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.95686274509803915" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" image="add_dishes_normal">
+                            <color key="titleShadowColor" red="0.23529411759999999" green="0.23137254900000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" image="add_dishes_selected"/>
+                        <connections>
+                            <action selector="addButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="MHc-EL-ba6"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoS-Ct-sav">
+                        <rect key="frame" x="298" y="0.0" width="51" height="51"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" image="minus_dishes_normal"/>
+                        <state key="highlighted" image="minus_dishes_selected"/>
+                        <connections>
+                            <action selector="minusButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="iPY-Le-lsH"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM3-YF-Zpi">
+                        <rect key="frame" x="169" y="0.0" width="76.5" height="51"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-z9-lGu">
+                        <rect key="frame" x="247" y="0.0" width="51" height="51"/>
+                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1Fc-bP-AHt" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="20:20" id="2vx-s6-OV2"/>
+                <constraint firstItem="QeF-33-Bez" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4NU-jc-Seg"/>
+                <constraint firstItem="fM3-YF-Zpi" firstAttribute="width" secondItem="mPc-z9-lGu" secondAttribute="height" multiplier="30:20" id="4PX-gn-vE6"/>
+                <constraint firstItem="1Fc-bP-AHt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9WI-Ym-KDH"/>
+                <constraint firstItem="fM3-YF-Zpi" firstAttribute="top" secondItem="mPc-z9-lGu" secondAttribute="top" id="ADI-Ve-pj9"/>
+                <constraint firstItem="1Fc-bP-AHt" firstAttribute="leading" secondItem="CoS-Ct-sav" secondAttribute="trailing" id="GES-f2-vgt"/>
+                <constraint firstItem="CoS-Ct-sav" firstAttribute="leading" secondItem="mPc-z9-lGu" secondAttribute="trailing" id="GHp-hx-e8x"/>
+                <constraint firstItem="CoS-Ct-sav" firstAttribute="height" secondItem="1Fc-bP-AHt" secondAttribute="height" id="IQn-ql-32v"/>
+                <constraint firstItem="mPc-z9-lGu" firstAttribute="leading" secondItem="fM3-YF-Zpi" secondAttribute="trailing" constant="1" id="L6H-cD-Nh7"/>
+                <constraint firstItem="mPc-z9-lGu" firstAttribute="top" secondItem="CoS-Ct-sav" secondAttribute="top" id="Scz-6Y-fvh"/>
+                <constraint firstItem="mPc-z9-lGu" firstAttribute="width" secondItem="CoS-Ct-sav" secondAttribute="width" id="WAj-d9-yMu"/>
+                <constraint firstItem="CoS-Ct-sav" firstAttribute="trailing" secondItem="1Fc-bP-AHt" secondAttribute="trailing" id="gLN-Av-YaW"/>
+                <constraint firstItem="mPc-z9-lGu" firstAttribute="height" secondItem="CoS-Ct-sav" secondAttribute="height" id="gMm-gU-hqo"/>
+                <constraint firstItem="1Fc-bP-AHt" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="jZ7-Qt-J4f"/>
+                <constraint firstAttribute="bottom" secondItem="QeF-33-Bez" secondAttribute="bottom" id="jwb-Ks-NTL"/>
+                <constraint firstItem="QeF-33-Bez" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mrM-Yl-KTG"/>
+                <constraint firstItem="QeF-33-Bez" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.2" id="qay-5g-jjz"/>
+                <constraint firstAttribute="trailing" secondItem="1Fc-bP-AHt" secondAttribute="trailing" id="ruy-Hj-qCB"/>
+                <constraint firstItem="CoS-Ct-sav" firstAttribute="width" secondItem="1Fc-bP-AHt" secondAttribute="width" id="tud-QY-ufJ"/>
+                <constraint firstItem="CoS-Ct-sav" firstAttribute="top" secondItem="1Fc-bP-AHt" secondAttribute="top" id="wXJ-Ob-cIr"/>
+                <constraint firstItem="fM3-YF-Zpi" firstAttribute="height" secondItem="mPc-z9-lGu" secondAttribute="height" id="wc5-Oj-CsK"/>
+            </constraints>
+            <size key="customSize" width="400" height="51"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gLN-Av-YaW"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="addButton" destination="1Fc-bP-AHt" id="Fid-0j-iuI"/>
+                <outlet property="countLabel" destination="mPc-z9-lGu" id="5y2-LE-zFS"/>
+                <outlet property="minusButton" destination="CoS-Ct-sav" id="9B8-qT-kmu"/>
+                <outlet property="nameLabel" destination="QeF-33-Bez" id="zNa-ga-n3u"/>
+                <outlet property="priceLabel" destination="fM3-YF-Zpi" id="FJ3-fY-z7o"/>
+            </connections>
+            <point key="canvasLocation" x="220" y="223.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="add_dishes_normal" width="50" height="50"/>
+        <image name="add_dishes_selected" width="52" height="52"/>
+        <image name="minus_dishes_normal" width="50" height="50"/>
+        <image name="minus_dishes_selected" width="52" height="52"/>
+    </resources>
+</document>

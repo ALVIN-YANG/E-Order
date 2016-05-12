@@ -6,11 +6,11 @@
 //  Copyright © 2016年 杨卢青. All rights reserved.
 //
 
-#import "DishDetailCell.h"
-#import "DishDetailItem.h"
+#import "DishBriefCell.h"
+#import "DishBriefItem.h"
 #import <UIImageView+WebCache.h>
 
-@interface DishDetailCell()
+@interface DishBriefCell()
 @property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
 @property (weak, nonatomic) IBOutlet UILabel *dishNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
@@ -23,16 +23,16 @@
 //6
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @end
-@implementation DishDetailCell
+@implementation DishBriefCell
 
 //接收数据, 来到setter
-- (void)setItem:(DishDetailItem *)item
+- (void)setItem:(DishBriefItem *)item
 {
     _item = item;
     self.dishNameLabel.text = item.name;
     [self.dishImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", DCBaseImage, item.image]]];
     self.priceLabel.text = item.price;
-    
+    self.countLabel.text = [NSString stringWithFormat:@"%ld", _item.orderCount];
     //按钮逻辑
     if (item.orderCount > 0) {
         [self.minusButton setHidden:NO];
